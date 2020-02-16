@@ -1,0 +1,77 @@
+/* custom styles */
+
+
+/* Sticky footer */
+html, body {
+    height: 100% !important;
+}
+
+body {
+    padding-top: 56px;
+    /* background-color: #000080; */
+}
+
+.content {
+    flex: 1 0 auto !important;
+}
+
+.input-group input {
+    border-top-left-radius: 35px !important;
+    border-bottom-left-radius: 35px !important;
+}
+
+.input-group-append button {
+    border-top-right-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+}
+
+#gifs {
+    /* Prevent vertical gaps */
+    line-height: 0;
+    
+    -webkit-column-count: 5;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    5;
+    -moz-column-gap:      0px;
+    column-count:         5;
+    column-gap:           0px;
+ }
+ 
+ #gifs img {
+   /* Just in case there are inline attributes */
+   width: 100% !important;
+   height: auto !important;
+   margin: 0;
+   padding: 0;
+   border: 2px solid #7FFFD4;
+ }
+ 
+ @media (max-width: 1200px) {
+   #gifs {
+   -moz-column-count:    4;
+   -webkit-column-count: 4;
+   column-count:         4;
+   }
+ }
+ @media (max-width: 1000px) {
+   #gifs {
+   -moz-column-count:    3;
+   -webkit-column-count: 3;
+   column-count:         3;
+   }
+ }
+ @media (max-width: 800px) {
+   #gifs {
+   -moz-column-count:    2;
+   -webkit-column-count: 2;
+   column-count:         2;
+   }
+ }
+ @media (max-width: 400px) {
+   #gifs {
+   -moz-column-count:    1;
+   -webkit-column-count: 1;
+   column-count:         1;
+   }
+ }
+
