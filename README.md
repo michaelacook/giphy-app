@@ -1,4 +1,4 @@
-# Gifs
+# Giphy App
 This is a simple GIF searching and sharing app powered by the GIPHY API. Currently a work in progress.
 
 ## License
