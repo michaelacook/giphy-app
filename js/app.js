@@ -1,3 +1,6 @@
+// prevent page reload on submit
+document.addEventListener('submit', e => e.preventDefault());
+
 // display tending on page load
 getTrending();
 
