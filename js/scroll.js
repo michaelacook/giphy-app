@@ -2,7 +2,7 @@
 
 let active = false;
 const scrollLimit = 10;
-offset += 10;
+offset += 11;
 
 window.addEventListener('scroll', e => {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {

@@ -3,12 +3,12 @@
 
 /* Sticky footer */
 html, body {
-    height: 100% !important;
+    height: 100%;
+    background-color: #191919;
 }
 
 body {
     padding-top: 56px;
-    /* background-color: #000080; */
 }
 
 .content {
@@ -28,17 +28,15 @@ body {
 #gifs {
     /* Prevent vertical gaps */
     line-height: 0;
-    
     -webkit-column-count: 5;
-    -webkit-column-gap:   0px;
-    -moz-column-count:    5;
-    -moz-column-gap:      0px;
-    column-count:         5;
-    column-gap:           0px;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;
+    column-gap: 0px;
  }
  
  #gifs img {
-   /* Just in case there are inline attributes */
    width: 100% !important;
    height: auto !important;
    margin: 0;
@@ -53,6 +51,7 @@ body {
    column-count:         4;
    }
  }
+ 
  @media (max-width: 1000px) {
    #gifs {
    -moz-column-count:    3;
@@ -60,6 +59,7 @@ body {
    column-count:         3;
    }
  }
+
  @media (max-width: 800px) {
    #gifs {
    -moz-column-count:    2;
@@ -67,6 +67,7 @@ body {
    column-count:         2;
    }
  }
+
  @media (max-width: 400px) {
    #gifs {
    -moz-column-count:    1;

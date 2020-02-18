@@ -8,13 +8,14 @@
     <title>GIFs</title>
 </head>
 
-<body class="d-flex flex-column bg-dark">
+<body class="d-flex flex-column">
     <!-- Navbar-->
-    <nav class="navbar fixed-top navbar-light shadow" style="background-color: #7FFFD4;">
-      <div class="container">
+    <nav class="navbar fixed-top navbar-light shadow-sm" style="background-color: #7FFFD4;">
+      <div class="container d-flex justify-content-between">
         <span class="navbar-brand">
           <a class="text-dark font-weight-bold" href="https://giphy.com/">Powered By GIPHY</a>
         </span>
+        <img id="toggleTheme" src="https://img.icons8.com/android/24/000000/sun.png">
       </div>
     </nav>
 
@@ -34,12 +35,10 @@
       </form>
       <!-- End search bar -->
 
-
       <!-- Display gifs -->
       <div class="mt-5" id="gifs"></div>
 
     </div>
-
     <!-- Footer-->
     <div class="footer">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

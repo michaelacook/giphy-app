@@ -3,18 +3,27 @@ getTrending();
 
 const searchBar = document.getElementById('searchBar');
 const searchBtn = document.getElementById('searchBtn');
+const toggleThemeButton = document.getElementById('toggleTheme');
+
+// closure for toggling light and dark themes
+const toggleUITheme = toggleTheme();
+toggleThemeButton.addEventListener('click', e => {
+    toggleUITheme();
+});
 
 let queryTerm;
 
 // search for and display gifs
 searchBtn.addEventListener('click', e => {
+    toggleBodyHeight()
     searchBar.blur();
     searchBtn.blur();
     queryTerm = searchBar.value;
-    fetch(`${protocol}${url}search?q=${queryTerm}&limit=${limit}&api_key=${key}`)
-        .then(clearGifs())
-        .then(res => res.json())
-        .then(gifs => displayAllGifs(gifs));
+    getGifs(queryTerm);
     searchBar.value = "";
 });
+
+
+
+
 
