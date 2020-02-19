@@ -55,6 +55,13 @@ function addShareLinks(e) {
     shareLink.value = link;
 }
 
+// copy gif url
+function copyLink() {
+    document.getElementById('shareLink').select();
+    document.execCommand("copy");
+    showLinkCopiedMsg();
+}
+
 // show message when link is copied in share modal
 function showLinkCopiedMsg() {
     document.querySelector('.modal .text-danger').textContent = 'copied!';
@@ -110,3 +117,4 @@ function displayErrorMessage() {
     document.getElementById('error')
         .innerHTML = `<h4 class="${className}">Something went wrong. Check your internet connection and try again.</h4>`;
 }
+

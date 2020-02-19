@@ -26,12 +26,12 @@ searchBtn.addEventListener('click', e => {
     searchBar.value = "";
 });
 
+// open social media share modal
 document.getElementById('gifs').addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON') {
         addShareLinks(e);
     }
 });
-
 
 
 
