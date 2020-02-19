@@ -26,6 +26,12 @@ searchBtn.addEventListener('click', e => {
     searchBar.value = "";
 });
 
+document.getElementById('gifs').addEventListener('click', e => {
+    if (e.target.tagName === 'BUTTON') {
+        addShareLinks(e);
+    }
+});
+
 
 
 

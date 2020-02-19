@@ -1,4 +1,4 @@
-// fetch trending 
+// fetch trending gifs
 function getTrending() {
     fetch(`${protocol}${url}trending?api_key=${key}&limit=${limit}`)
         .then(response => response.json())
@@ -20,10 +20,20 @@ function displayGif({ images }) {
     const gifs = document.getElementById('gifs');
     const gif = images.fixed_width;
     const img = document.createElement('img');
-    img.style.width = gif.width;
-    img.style.height = gif.height;
+    const div = document.createElement('div');
+    const btn = document.createElement('button');
+    const overLay = document.createElement('div');
+    overLay.className = 'overlay';
+    div.className = 'gif-container';
+    btn.className = 'btn btn-sm btn-primary shareBtn';
+    btn.setAttribute('data-toggle', 'modal');
+    btn.setAttribute('data-target', '#shareModal');
+    btn.textContent = 'Share';
     img.src = gif.url;
-    gifs.appendChild(img);
+    div.appendChild(img);
+    div.appendChild(overLay);
+    div.appendChild(btn);
+    gifs.appendChild(div);
 }
 
 // iterate over gif objects and display each
@@ -33,9 +43,31 @@ function displayAllGifs({ data }) {
     }
 }
 
+// gets and adds share link to share modal
+function addShareLinks(e) {
+    const link = e.target.parentNode.firstElementChild.src;
+    const shareLink = document.getElementById('shareLink');
+    const fbShareLink = `https://www.facebook.com/sharer/sharer.php?u=${link}`;
+    const twitterShareLink = `http://twitter.com/share?url=${link}`;
+    document.querySelector('.fa-facebook').parentNode.href=fbShareLink;
+    document.querySelector('.fa-twitter').parentNode.href=twitterShareLink;
+    shareLink.setAttribute('placeholder', link);
+    shareLink.value = link;
+}
+
+// show message when link is copied in share modal
+function showLinkCopiedMsg() {
+    document.querySelector('.modal .text-danger').textContent = 'copied!';
+}
+
+// clear link copied message when modal is closed
+function clearLinkCopiedMsg() {
+    document.querySelector('.modal .text-danger').textContent = '';
+}
+
 // clear the display area
 function clearGifs() {
-    document.getElementById('gifs').innerHTML = "";
+    document.getElementById('gifs').innerHTML = '';
 }
 
 // toggle UI theme

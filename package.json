@@ -1,0 +1,22 @@
+{
+  "name": "giphy-app",
+  "version": "1.0.0",
+  "description": "A gif searching and sharing app.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelacook/giphy-app.git"
+  },
+  "author": "Michael A. Cook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelacook/giphy-app/issues"
+  },
+  "homepage": "https://github.com/michaelacook/giphy-app#readme",
+  "dependencies": {
+    "copy-to-clipboard": "^3.2.1"
+  }
+}
