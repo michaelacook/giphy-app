@@ -49,8 +49,10 @@ function addShareLinks(e) {
     const shareLink = document.getElementById('shareLink');
     const fbShareLink = `https://www.facebook.com/sharer/sharer.php?u=${link}`;
     const twitterShareLink = `http://twitter.com/share?url=${link}`;
+    const redditShareLink = `http://www.reddit.com/submit?url=${link}`;
     document.querySelector('.fa-facebook').parentNode.href=fbShareLink;
     document.querySelector('.fa-twitter').parentNode.href=twitterShareLink;
+    document.querySelector('.fa-reddit').parentNode.href=redditShareLink;
     shareLink.setAttribute('placeholder', link);
     shareLink.value = link;
 }
