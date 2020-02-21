@@ -11,22 +11,19 @@ body {
   padding-top: 56px;
 }
 
+nav {
+  background-color: #7FFFD4;
+}
+
 .content {
   flex: 1 0 auto !important;
 }
 
-.input-group input {
-  border-top-left-radius: 35px !important;
-  border-bottom-left-radius: 35px !important;
-}
-
-.input-group-append button {
-  border-top-right-radius: 35px !important;
-  border-bottom-right-radius: 35px !important;
+.footer div {
+  background-color: #66CDAA;
 }
 
 #gifs {
-  /* Prevent vertical gaps */
   line-height: 0;
   -webkit-column-count: 5;
   -webkit-column-gap: 0px;
@@ -46,25 +43,25 @@ body {
  
 @media (max-width: 1200px) {
   #gifs {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
   }
 }
  
 @media (max-width: 1000px) {
   #gifs {
-  -moz-column-count:    3;
-  -webkit-column-count: 3;
-  column-count:         3;
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
   }
 }
 
 @media (max-width: 800px) {
   #gifs {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
   }
 }
 
@@ -75,7 +72,6 @@ body {
     column-count:         1;
   }
 }
-
 
 /* overlay for share button */
 .gif-container {
@@ -97,19 +93,40 @@ body {
   background: rgba(0, 0, 0, .3);
 }
 
-.shareBtn {
-  position: absolute;
-  left: 40%;
-  top: 40%;
-  text-align: center;
-  opacity: 0;
-  transition: opacity .35s ease;
-}
-
 .gif-container:hover .shareBtn {
   opacity: 1;
 }
 
+.shareBtn {
+  position: absolute;
+  left: 80%;
+  top: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+  color: #7FFFD4;
+  transition: 0.2s;
+}
+
+.shareBtn:hover {
+  color: #0DE5AC;
+}
+
+#shareLink {
+  background-color: #E9ECEF;
+}
+
 .modal-content {
   border-radius: 13px !important;
+}
+
+/* Search bar */
+#searchBar {
+  border-top-left-radius: 35px !important;
+  border-bottom-left-radius: 35px !important;
+} 
+
+.input-group-append button {
+  border-top-right-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
 }

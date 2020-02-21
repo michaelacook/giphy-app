@@ -28,7 +28,7 @@ searchBtn.addEventListener('click', e => {
 
 // open social media share modal
 document.getElementById('gifs').addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON') {
+    if (e.target.tagName === 'I') {
         addShareLinks(e);
     }
 });
